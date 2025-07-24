@@ -1,0 +1,155 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #00ffe1;
+  transition: 0.3s;
+}
+a:hover {
+  color: #00b3ff;
+}
+
+/* Header styles */
+header {
+  background: #000;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 15px #00ffff33;
+}
+
+.logo {
+  font-size: 28px;
+  color: #00fff7;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ffe1;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  background: #00ffff22;
+  box-shadow: 0 0 10px #00fff7;
+}
+
+/* Contact hero section */
+.contact-hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  box-shadow: inset 0 0 100px #00ffee11;
+}
+
+.contact-hero h1 {
+  font-size: 48px;
+  color: #00fff7;
+  text-shadow: 0 0 15px #00fff7aa;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #cccccc;
+}
+
+/* Form Section */
+.contact-form-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #121212;
+  box-shadow: 0 0 25px #00ffe066;
+  border-radius: 12px;
+  margin-bottom: 60px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #00ffe1;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #00ffe0;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 10px #00bfff88;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  background: #00ffe1;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px #00fff7;
+}
+
+button[type="submit"]:hover {
+  background: #00d1c7;
+  box-shadow: 0 0 15px #00fff7aa;
+}
+
+/* Status Message */
+#status-message {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #777;
+  font-size: 14px;
+  border-top: 1px solid #00ffe055;
+}

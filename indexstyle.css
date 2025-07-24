@@ -1,0 +1,255 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0a0a0f;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #0f0f1a;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #00f0ff;
+  box-shadow: 0 0 20px #00f0ff70;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+/* Navigation */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffffcc;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: color 0.3s;
+  position: relative;
+}
+
+/* Neon underline effect */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: #ff00ff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+  box-shadow: 0 0 8px #ff00ff;
+}
+
+.navbar a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #111, #000);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 20px auto;
+  color: #ccc;
+}
+
+.cta {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 12px 30px;
+  background: #ff00ff;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 40px;
+  box-shadow: 0 0 15px #ff00ff;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff00ff;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background: #111;
+  gap: 40px;
+}
+
+.feature {
+  background: #1a1a2e;
+  padding: 30px;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: 0 0 15px #00f0ff33;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px #00f0ff77;
+}
+
+.feature h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #00f0ff;
+  text-shadow: 0 0 8px #00f0ff;
+}
+
+/* Footer */
+.footer {
+  background: #0f0f1a;
+  padding: 60px 30px 20px;
+  color: #ccc;
+  box-shadow: 0 0 20px #00f0ff30 inset;
+  border-top: 2px solid #00f0ff50;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-brand h2 {
+  color: #00f0ff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.footer-links h3,
+.footer-social h3,
+.footer-newsletter h3 {
+  color: #00f0ff;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 6px 0;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+  filter: brightness(0) invert(1) drop-shadow(0 0 5px #00f0ff);
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #1c1c2e;
+  border: 1px solid #00f0ff55;
+  color: white;
+  border-radius: 6px;
+}
+
+.footer-newsletter button {
+  padding: 10px;
+  background: #00f0ff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 0 10px #00f0ff88;
+}
+
+.footer-newsletter button:hover {
+  background: #00cce0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #888;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | NeoNation</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("B1kNGaApHvo8wMhRX"); // 🔁 Replace with your real USER ID
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">NeoNation</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact-hero">
+    <h1>📬 Contact Us</h1>
+    <p>Have a question, suggestion, or just want to say hello? Reach out below!</p>
+  </section>
+
+  <section class="contact-form-section">
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="status-message" style="margin-top: 15px;"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 NeoNation | Crafted with neon vibes 🌐</p>
+  </footer>
+
+  <!-- EmailJS script -->
+  <script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const statusMessage = document.getElementById("status-message");
+    statusMessage.innerHTML = "⏳ Sending...";
+
+    emailjs.sendForm("service_x04ya6f", "template_9pxomno", this)
+      .then(function () {
+        statusMessage.innerHTML = "✅ Message sent successfully!";
+        statusMessage.style.color = "#00ffcc";
+        document.getElementById("contact-form").reset();
+      }, function (error) {
+        statusMessage.innerHTML = "❌ Failed to send. Please try again.";
+        statusMessage.style.color = "#ff4d4d";
+      });
+  });
+</script>
+
+</body>
+</html>
